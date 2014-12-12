@@ -21,48 +21,11 @@ public class ContinuousEvent extends Event {
     return dates;
   }
 
-  @Override
-  public ContinuousEvent withName(String name) {
-    return (ContinuousEvent) super.withName(name);
-  }
-
-  @Override
-  public ContinuousEvent withDescription(String description) {
-    return (ContinuousEvent) super.withDescription(description);
-  }
-
-  @Override
-  public ContinuousEvent withImage(Object image) {
-    return (ContinuousEvent) super.withImage(image);
-  }
-
-  @Override
-  public ContinuousEvent withType(EventType type) {
-    return (ContinuousEvent) super.withType(type);
-  }
-
-  public ContinuousEvent withStartDate(YearlessDate startDate) {
-    ContinuousEvent newEvent = (ContinuousEvent) copy();
-    newEvent.startDate = startDate;
-    return newEvent;
-  }
-
-  public ContinuousEvent withEndDate(YearlessDate endDate) {
-    ContinuousEvent newEvent = (ContinuousEvent) copy();
-    newEvent.endDate = endDate;
-    return newEvent;
-  }
-
-  @Override
-  protected Event newEvent() {
-    return new ContinuousEvent();
-  }
-
-  @Override
-  protected void copyExtraFields(Event superclassDestination) {
-    ContinuousEvent destination = (ContinuousEvent) superclassDestination;
-    destination.startDate = startDate;
-    destination.endDate = endDate;
+  ContinuousEvent(String name, String description, Object image, EventType type,
+      YearlessDate startDate, YearlessDate endDate) {
+    super(name, description, image, type);
+    this.startDate = startDate;
+    this.endDate = endDate;
   }
 
 }
