@@ -5,8 +5,8 @@ import java.io.OutputStream;
 
 public interface Calendar {
 
-  public OutputStream exportToPdf() throws IOException;
+    public OutputStream exportToPdf() throws IOException;
 
-  public String exportToHtml();
+    public String exportToHtml();
 
 }

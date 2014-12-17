@@ -7,11 +7,11 @@ import org.kataetos.event.EventType;
 
 public interface ThemeBuilder {
 
-  public ThemeBuilder withEventDisplayFormat(EventType type, DisplayFormat format);
+    public ThemeBuilder withEventDisplayFormat(EventType type, DisplayFormat format);
 
-  public ThemeBuilder withPrecedence(List<EventType> precedence);
+    public ThemeBuilder withPrecedence(List<EventType> precedence);
 
-  public ThemeBuilder withTitleDisplayFormat(DisplayFormat format);
+    public ThemeBuilder withTitleDisplayFormat(DisplayFormat format);
 
-  public Theme build();
+    public Theme build();
 }
