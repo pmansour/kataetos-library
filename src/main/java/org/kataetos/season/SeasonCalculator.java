@@ -68,10 +68,10 @@ public class SeasonCalculator {
     return ImmutableSet.of();
   }
 
-  private static Boolean isInKiahk(YearCopticDate date) {
+  static Boolean isInKiahk(YearCopticDate date) {
     return date.getMonth() == CopticMonth.KIAHK;
   }
-  private static Boolean isInHolyFiftyDays(YearGregorianDate date, YearGregorianDate easterDate) {
+  static Boolean isInHolyFiftyDays(YearGregorianDate date, YearGregorianDate easterDate) {
     YearGregorianDate firstDay, lastDay;
 
     firstDay = easterDate.addDays(1); // Easter Monday.
@@ -79,7 +79,7 @@ public class SeasonCalculator {
 
     return date.compareTo(firstDay) >= 0 && date.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInNayrouzPeriod(YearCopticDate date, YearCopticDate copticNewYearDate) {
+  static Boolean isInNayrouzPeriod(YearCopticDate date, YearCopticDate copticNewYearDate) {
     YearCopticDate firstDay, lastDay;
 
     firstDay = copticNewYearDate.addDays(0); // Coptic New Year.
@@ -87,7 +87,8 @@ public class SeasonCalculator {
 
     return date.compareTo(firstDay) >= 0 && date.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInNativityFast(YearCopticDate copticDate, YearGregorianDate gregorianDate) {
+
+  static Boolean isInNativityFast(YearCopticDate copticDate, YearGregorianDate gregorianDate) {
     YearCopticDate firstDay, lastDay;
 
     firstDay = new YearCopticDateImpl(15, CopticMonth.HATOUR, copticDate.getYear());
@@ -95,7 +96,7 @@ public class SeasonCalculator {
 
     return copticDate.compareTo(firstDay) >= 0 && copticDate.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInJonahFast(YearGregorianDate date, YearGregorianDate easterDate) {
+  static Boolean isInJonahFast(YearGregorianDate date, YearGregorianDate easterDate) {
     YearGregorianDate firstDay, lastDay;
 
     firstDay = easterDate.addDays(-69); // Monday 2 weeks before the start of lent.
@@ -103,7 +104,7 @@ public class SeasonCalculator {
 
     return date.compareTo(firstDay) >= 0 && date.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInLent(YearGregorianDate date, YearGregorianDate easterDate) {
+  static Boolean isInLent(YearGregorianDate date, YearGregorianDate easterDate) {
     YearGregorianDate firstDay, lastDay;
 
     firstDay = easterDate.addDays(-55); // Monday 55 days before Easter.
@@ -111,7 +112,7 @@ public class SeasonCalculator {
 
     return date.compareTo(firstDay) >= 0 && date.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInApostlesFast(YearGregorianDate date, YearGregorianDate easterDate) {
+  static Boolean isInApostlesFast(YearGregorianDate date, YearGregorianDate easterDate) {
     YearGregorianDate firstDay, lastDay;
 
     firstDay = easterDate.addDays(50); // Monday after Pentecost.
@@ -119,7 +120,7 @@ public class SeasonCalculator {
 
     return date.compareTo(firstDay) >= 0 && date.compareTo(lastDay) <= 0;
   }
-  private static Boolean isInStMaryFast(YearCopticDate date) {
+  static Boolean isInStMaryFast(YearCopticDate date) {
     YearCopticDate firstDay, lastDay;
 
     firstDay = new YearCopticDateImpl(1, CopticMonth.MESRA, date.getYear()); // Starts 1 Mesra.
