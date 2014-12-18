@@ -9,5 +9,8 @@ public interface YearCopticDate extends YearDate {
   public Integer getYear();
 
   @Override
+  public YearCopticDate addDays(Integer numberOfDays);
+
+  @Override
   public YearlessCopticDate withoutYear();
 }

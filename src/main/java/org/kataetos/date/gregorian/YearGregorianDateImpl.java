@@ -1,5 +1,6 @@
 package org.kataetos.date.gregorian;
 
+import org.kataetos.date.DayOfWeek;
 import org.kataetos.date.YearCopticDate;
 import org.kataetos.date.YearDate;
 import org.kataetos.date.YearGregorianDate;
@@ -27,6 +28,12 @@ public class YearGregorianDateImpl implements YearGregorianDate {
   }
 
   @Override
+  public DayOfWeek getDayOfWeek() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
   public YearlessGregorianDate withoutYear() {
     return new YearlessGregorianDateImpl(day, month);
   }
@@ -47,7 +54,7 @@ public class YearGregorianDateImpl implements YearGregorianDate {
   }
 
   @Override
-  public YearDate nextDay() {
+  public YearGregorianDate addDays(Integer numberOfDays) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -65,4 +72,27 @@ public class YearGregorianDateImpl implements YearGregorianDate {
            && getYear().equals(otherGregorianDate.getYear());
   }
 
+  @Override
+  public int compareTo(YearDate other) {
+    YearGregorianDate otherGregorian = other.toGregorianDate();
+
+    // Compare by year, then month, then day.
+    if (getYear() < otherGregorian.getYear()) {
+      return -1;
+    } else if (getYear() > otherGregorian.getYear()) {
+      return 1;
+    }
+    if (getMonth() < otherGregorian.getMonth()) {
+      return -1;
+    } else if (getMonth() > otherGregorian.getMonth()) {
+      return 1;
+    }
+    if (getDay() < otherGregorian.getDay()) {
+      return -1;
+    } else if (getDay() > otherGregorian.getDay()) {
+      return 1;
+    }
+
+    return 0;
+  }
 }
