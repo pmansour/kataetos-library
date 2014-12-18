@@ -4,6 +4,8 @@ import java.util.Set;
 
 import org.kataetos.date.YearlessDate;
 
+import lombok.Getter;
+
 /**
  * Immutable abstract class to represent a (yearless) event.
  *
@@ -11,28 +13,14 @@ import org.kataetos.date.YearlessDate;
  */
 public abstract class Event {
 
+  @Getter
   private String name;
+  @Getter
   private String description;
-  // TODO(pmansour): Work out the best representation for images, that would work in both Java SE
-  // and Android.
+  @Getter
   private Object image;
+  @Getter
   private EventType type;
-
-  public String getName() {
-    return name;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public Object getImage() {
-    return image;
-  }
-
-  public EventType getType() {
-    return type;
-  }
 
   public abstract Set<YearlessDate> getDates();
 
