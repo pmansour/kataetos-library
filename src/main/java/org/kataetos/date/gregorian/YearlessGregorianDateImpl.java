@@ -29,12 +29,6 @@ public class YearlessGregorianDateImpl implements YearlessGregorianDate {
   }
 
   @Override
-  public YearlessDate nextDay() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
   public boolean equals(Object other) {
     if (other == null || !(other instanceof YearlessGregorianDate)) {
       return false;

@@ -24,12 +24,6 @@ public class OrthodoxEasterOffsetImpl implements OrthodoxEasterOffset {
   }
 
   @Override
-  public YearlessDate nextDay() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
   public boolean equals(Object other) {
     if (other == null || !(other instanceof OrthodoxEasterOffset)) {
       return false;

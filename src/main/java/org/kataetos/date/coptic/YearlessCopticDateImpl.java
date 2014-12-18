@@ -31,12 +31,6 @@ public class YearlessCopticDateImpl implements YearlessCopticDate {
   }
 
   @Override
-  public YearlessDate nextDay() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
   public boolean equals(Object other) {
     if (other == null || !(other instanceof YearlessCopticDate)) {
       return false;
