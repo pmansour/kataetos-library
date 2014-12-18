@@ -8,15 +8,15 @@ import com.google.common.collect.ImmutableSet;
 
 public class SingleEvent extends Event {
 
-    private YearlessDate date;
+  private YearlessDate date;
 
-    @Override
-    public Set<YearlessDate> getDates() {
-        return ImmutableSet.of(date);
-    }
+  @Override
+  public Set<YearlessDate> getDates() {
+    return ImmutableSet.of(date);
+  }
 
-    SingleEvent(String name, String description, Object image, EventType type, YearlessDate date) {
-        super(name, description, image, type);
-        this.date = date;
-    }
+  SingleEvent(String name, String description, Object image, EventType type, YearlessDate date) {
+    super(name, description, image, type);
+    this.date = date;
+  }
 }

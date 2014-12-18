@@ -2,20 +2,20 @@ package org.kataetos.season;
 
 public enum Season {
 
-    // General
-    Annual,
-    Joyful,
+  // General
+  Annual,
+  Joyful,
 
-    // Special Periods
-    Kiahk,
-    HolyFiftyDays,
-    FeastOfTheCross,
+  // Special Periods
+  Kiahk,
+  HolyFiftyDays,
+  FeastOfTheCross,
 
-    // Fasts
-    NativityFast,
-    JonahFast,
-    Lent,
-    ApostlesFast,
-    StMaryFast
+  // Fasts
+  NativityFast,
+  JonahFast,
+  Lent,
+  ApostlesFast,
+  StMaryFast
 
 }

@@ -1,11 +1,12 @@
 package org.kataetos.date;
 
 public interface YearDate {
-    public YearGregorianDate toGregorianDate();
 
-    public YearCopticDate toCopticDate();
+  public YearGregorianDate toGregorianDate();
 
-    public YearlessDate withoutYear();
+  public YearCopticDate toCopticDate();
 
-    public YearDate nextDay();
+  public YearlessDate withoutYear();
+
+  public YearDate nextDay();
 }

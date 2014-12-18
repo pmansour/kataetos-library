@@ -2,12 +2,12 @@ package org.kataetos.date;
 
 public interface YearGregorianDate extends YearDate {
 
-    public Integer getDay();
+  public Integer getDay();
 
-    public Integer getMonth();
+  public Integer getMonth();
 
-    public Integer getYear();
+  public Integer getYear();
 
-    @Override
-    public YearlessGregorianDate withoutYear();
+  @Override
+  public YearlessGregorianDate withoutYear();
 }

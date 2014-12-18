@@ -7,10 +7,10 @@ import org.kataetos.event.EventType;
 
 public interface Theme {
 
-    public DisplayFormat getDisplayFormat(EventType type);
+  public DisplayFormat getDisplayFormat(EventType type);
 
-    public List<EventType> getEventPrecedence();
+  public List<EventType> getEventPrecedence();
 
-    public DisplayFormat getTitleDisplayFormat();
+  public DisplayFormat getTitleDisplayFormat();
 
 }

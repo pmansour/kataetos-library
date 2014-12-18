@@ -2,12 +2,12 @@ package org.kataetos.date;
 
 public interface YearCopticDate extends YearDate {
 
-    public Integer getDay();
+  public Integer getDay();
 
-    public CopticMonth getMonth();
+  public CopticMonth getMonth();
 
-    public Integer getYear();
+  public Integer getYear();
 
-    @Override
-    public YearlessCopticDate withoutYear();
+  @Override
+  public YearlessCopticDate withoutYear();
 }
